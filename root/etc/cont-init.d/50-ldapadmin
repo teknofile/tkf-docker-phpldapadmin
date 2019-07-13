@@ -1,0 +1,27 @@
+#!/usr/bin/with-contenv bash
+
+
+mkdir -p \
+  /config/www \
+  /config/php \
+  /config/logs \
+  /config/site-confs \
+  /run/apache2 
+
+[[ ! -e /config/httpd.conf ]] && \
+  cp /defaults/httpd.conf /config/httpd.conf
+
+[[ ! -e /config/php/php.ini ]] && \
+  cp /defaults/php.ini /config/php/php.ini
+
+[[ ! -L /etc/apache2/httpd.conf ]] && \
+  ln -sf /config/httpd.conf /etc/apache2/httpd.conf
+
+[[ ! -L /etc/php7/php.ini ]] && \
+  ln -sf /config/php/php.ini /etc/php7/php.ini
+
+chown -R abc:abc \
+  /config \
+  /run/apache2 \
+  /var/www
+

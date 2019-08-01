@@ -17,13 +17,10 @@ This image is still in testing. I have released v0.1.0, as a beta quality releas
 To get started, [download the code](https://github.com/teknofile/tkf-docker-phpldapadmin/releases/tag/v0.1.0), build the container and run it. See below for an example method I use for building the container.
 
 ### Prerequisites
-
 Really all that should be needed is a recent version of Docker (I have been testing with Docker version 18.09.6).
 
 ### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
+A step by step series of examples that tell you how to get a development env running. 
 Download the code and all
 ```
 git clone https://github.com/teknofile/tkf-docker-phpldapadmin
@@ -59,7 +56,7 @@ We (will) use [SemVer](http://semver.org/) for versioning. For the versions avai
 
 ## Authors
 
-* **teknofile** - *Initial work* - [teknofile](https://teknofile.org/)
+*  **teknofile** - *Initial work* - [teknofile](https://teknofile.org/)
 
 See also the list of [contributors](https://github.com/teknofile/tkf-docker-phpldapadmin/contributors) who participated in this project.
 
@@ -69,4 +66,4 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 
 ## Acknowledgments
 
-* TBD
+*  TBD

@@ -1,0 +1,2 @@
+# tkf-docker-phpldapadmin
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5d81a1b29d774cf1af51acbac2aeaf13)](https://app.codacy.com/app/teknofile/tkf-docker-phpldapadmin?utm_source=github.com&utm_medium=referral&utm_content=teknofile/tkf-docker-phpldapadmin&utm_campaign=Badge_Grade_Dashboard)

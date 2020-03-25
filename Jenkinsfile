@@ -15,6 +15,11 @@ pipeline {
         sh '''echo "TODO: Determine a good strategy for finding and scanning shell code"'''
       }
     }
+    stage('Docker Linting') {
+      steps {
+        sh '''echo "TODO: Determine a good strategy for linting a Dockerfile"'''
+      }
+    }
     stage('Docker Build x86') {
       steps {
         sh "docker build --no-cache --pull -t ${TKF_USER}/${CONTAINER_NAME}:amd64 ."
@@ -41,28 +46,6 @@ pipeline {
           sh "docker push ${TKF_USER}/${CONTAINER_NAME}:amd64"
         }
       }
-    }
-    stage('Sync Readme') {
-      steps {
-        withCredentials([
-          [
-            $class: 'UsernamePasswordMultiBinding',
-            credentialsId: 'teknofile-docker-creds',
-            usernameVariable: 'DOCKERUSER',
-            passwordVariable: 'DOCKERPASS'
-          ]
-        ]) {
-          sh '''#! /bin/bash
-                docker pull lsiodev/readme-sync
-                docker run --rm=true \
-                  -e DOCKERHUB_USERNAME=$DOCKERUSRE \
-                  -e DOCKERHUB_PASSWORD=$DOCKERPASS \
-                  -e GIT_REPOSITORY=${TKF_USER}/${CONTAINER_NAME} \
-                  -e DOCKER_REPOSITORY=${CONTAINER_NAME} \
-                  -e GIT_BRANCH=master \
-                  lsiodev/readme-sync bash -c 'node sync' '''
-          }
-        }
     }
   }
 }

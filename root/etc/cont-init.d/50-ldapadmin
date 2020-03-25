@@ -4,8 +4,7 @@
 mkdir -p \
   /config/www \
   /config/php \
-  /config/logs \
-  /config/site-confs \
+  /config/tmp \
   /run/apache2 
 
 [[ ! -e /config/httpd.conf ]] && \
